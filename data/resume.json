@@ -1,0 +1,151 @@
+{
+  "name": "Lauren Gottberg",
+  "title": "Senior Software Engineer ✦",
+  "contact": {
+    "email": "gottberglauren@gmail.com",
+    "website": "lgottber.github.io",
+    "location": "Raleigh, NC",
+    "github": "lgottber"
+  },
+  "summary": "Detail-driven Senior Software Engineer with a proven track record of delivering robust integrations and scalable backend systems for SaaS enterprises. Excels in optimizing performance, designing resilient architectures, and guiding teams to achieve technical excellence.",
+  "experience": [
+    {
+      "company": "Kndly LLC",
+      "location": "Remote",
+      "period": "Dec 2025 – Present",
+      "roles": [
+        {
+          "title": "Co-Founding Software Engineer",
+          "period": "Dec 2025 – Present",
+          "bullets": [
+            "Co-founded a software development LLC and led end-to-end design and development of a retirement planning platform featuring user profiles, interactive educational modules, and a content hub with podcasts and articles.",
+            "Built and integrated key business features including a custom user analytics platform for engagement insights, e-commerce functionality (Shopify, Lulu), and donation capabilities.",
+            "Architected and deployed a serverless application using Deno and Next.js, reducing infrastructure costs and optimizing performance through efficient data and storage design."
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Pendo.io",
+      "location": "Raleigh, NC",
+      "period": "Jun 2019 – Dec 2025 · 6 yrs 7 mos",
+      "roles": [
+        {
+          "title": "Senior Software Engineer",
+          "period": "Feb 2025 – Dec 2025",
+          "bullets": [
+            "Led development of a 0-to-1 data export feature using Golang, Avro, and Pendo's proprietary backend systems — enabling delivery of up to 5TB of data to customer cloud storage and generating ~$10M in ARR.",
+            "Expanded the export system to support additional data types and direct loading into Snowflake, increasing product flexibility and customer value.",
+            "Developed and maintained integrations with Salesforce, HubSpot, Marketo, and Slack."
+          ]
+        },
+        {
+          "title": "Software Engineer",
+          "period": "Aug 2020 – Feb 2025",
+          "bullets": [
+            "Collaborated with teams as a performance consultant for Pendo's custom query language, optimizing architecture and performance across the organization.",
+            "Streamlined a portion of Pendo's custom query language, reducing CPU usage by 64% and memory usage by 60%.",
+            "Introduced observability that surfaced critical performance insights for 80% of data aggregations that were previously hidden.",
+            "Mentored junior engineers and led a summer intern through a critical webhook visibility project."
+          ]
+        },
+        {
+          "title": "Associate Software Engineer",
+          "period": "Jun 2019 – Jul 2020",
+          "bullets": [
+            "Developed and managed the backend of a business-to-employee training platform, scaling to support 13x customer growth in one year and producing ~$1M ARR.",
+            "Redesigned CSV-based data segmentation, cutting segment tagging time by 90%.",
+            "Created an interactive training program for new hires, giving context to customers' pain points within the application."
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Oracle",
+      "location": "North Carolina",
+      "period": "May 2016 – Dec 2018 · 3 Co-Ops",
+      "roles": [
+        {
+          "title": "Sales Consulting Co-Op",
+          "period": "May 2018 – Dec 2018",
+          "bullets": [
+            "Researched and developed documentation on service-based architectures for use in 5G telecommunications network applications.",
+            "Developed training materials and demos for pre-sales engineers on cloud-native concepts including Oracle Kubernetes Engine, Oracle Bare Metal Cloud, Istio, the Elastic Stack, EFK, and Spinnaker.",
+            "Contributed creative use cases and demos for Oracle SaaS products."
+          ]
+        },
+        {
+          "title": "Security Engineering Co-Op",
+          "period": "May 2017 – Dec 2017",
+          "bullets": [
+            "Authored a REST service for the cloud-native microservices platform's Identity Provisioning Platform.",
+            "Created a JSON Web Token minting tool to provide authorization and authentication for cloud platform workflows, along with a SQLite database for lifecycle management.",
+            "Implemented extensive logging, monitoring, and auditing for the microservices platform's security services.",
+            "Evaluated third-party technologies and their licenses to map corporate security compliance standards."
+          ]
+        },
+        {
+          "title": "Network Engineering Co-Op",
+          "period": "May 2016 – Dec 2016",
+          "bullets": [
+            "Developed Perl, Python, and Teng scripts for a switch vendor abstraction API, along with unit and automated tests.",
+            "Performed tests and feature investigations on switches to verify adherence to Five 9's high-availability standards.",
+            "Discovered and reported critical security vulnerabilities to stakeholders, coordinating with vendors to ensure compliance."
+          ]
+        }
+      ]
+    },
+    {
+      "company": "UNC Charlotte – College of Computing and Informatics",
+      "location": "Charlotte, NC",
+      "period": "Feb 2017 – May 2017",
+      "roles": [
+        {
+          "title": "Research Assistant",
+          "period": "Feb 2017 – May 2017",
+          "bullets": [
+            "Gathered and analyzed data in support of the Women in Computing and NCWIT Pacesetters project.",
+            "Conducted interviews to obtain qualitative data and built an interactive system to display quantitative data visually."
+          ]
+        }
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "B.S. Computer Science",
+      "school": "University of North Carolina at Charlotte",
+      "period": "2014 – 2019",
+      "note": "Chancellor's List · Dean's List · Most Active and Engaged Student"
+    }
+  ],
+  "skills": {
+    "languages": [
+      "Golang",
+      "Python",
+      "TypeScript",
+      "JavaScript",
+      "Deno",
+      "Next.js",
+      "SQL",
+      "Avro"
+    ],
+    "tools": [
+      "Google Cloud Platform",
+      "AWS",
+      "Snowflake",
+      "Tray.ai",
+      "Bobsled",
+      "NoSQL"
+    ],
+    "other": [
+      "Distributed Systems",
+      "REST APIs",
+      "Serverless Architecture",
+      "Observability",
+      "Performance Optimization",
+      "Leadership & Mentoring",
+      "Agile Methodologies"
+    ]
+  }
+}
