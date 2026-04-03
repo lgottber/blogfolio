@@ -6,7 +6,8 @@ import {
   DragEndEvent,
   DragOverlay,
   DragStartEvent,
-  PointerSensor,
+  MouseSensor,
+  TouchSensor,
   useSensor,
   useSensors,
 } from "@dnd-kit/core";
@@ -49,10 +50,10 @@ function SortableTile(
     transition,
     isDragging,
   } = useSortable({ id });
-  const handleProps = { ...(listeners ?? {}), ...attributes } as Record<
-    string,
-    unknown
-  >;
+  const handleProps = {
+    ...(listeners ?? {}),
+    ...attributes,
+  } as Record<string, unknown>;
   return (
     <div
       ref={setNodeRef}
@@ -60,7 +61,6 @@ function SortableTile(
         transform: CSS.Transform.toString(transform),
         transition,
         opacity: isDragging ? 0.35 : 1,
-        touchAction: "none",
         gridColumn,
         alignSelf: id === "welcome" || id === "catpainter"
           ? "stretch"
@@ -255,7 +255,8 @@ export default function DraggableHome({ posts, song, hairColor }: Props) {
   const [activeId, setActiveId] = useState<TileId | null>(null);
 
   const sensors = useSensors(
-    useSensor(PointerSensor, { activationConstraint: { distance: 6 } }),
+    useSensor(MouseSensor, { activationConstraint: { distance: 6 } }),
+    useSensor(TouchSensor, { activationConstraint: { delay: 250, tolerance: 5 } }),
   );
 
   function handleDragStart(e: DragStartEvent) {

@@ -119,6 +119,7 @@ export default function CatPainter() {
     };
     const onMouseMove = (e: MouseEvent) => applyDrag(e.clientX, e.clientY);
     const onTouchMove = (e: TouchEvent) => {
+      if (!dragging.current) return;
       e.preventDefault();
       applyDrag(e.touches[0].clientX, e.touches[0].clientY);
     };
@@ -166,6 +167,19 @@ export default function CatPainter() {
       id,
       startMouseX: e.clientX,
       startMouseY: e.clientY,
+      startPosX: pos.x,
+      startPosY: pos.y,
+    };
+  };
+
+  const onAccTouchStart = (e: React.TouchEvent, id: AccId) => {
+    e.stopPropagation();
+    const touch = e.touches[0];
+    const pos = positions[id] ?? { x: ACC_DEFAULT[id].x, y: ACC_DEFAULT[id].y };
+    dragging.current = {
+      id,
+      startMouseX: touch.clientX,
+      startMouseY: touch.clientY,
       startPosX: pos.x,
       startPosY: pos.y,
     };
@@ -411,6 +425,7 @@ export default function CatPainter() {
                       alt={id}
                       draggable={false}
                       onMouseDown={(e) => onAccMouseDown(e, id)}
+                      onTouchStart={(e) => onAccTouchStart(e, id)}
                       style={{
                         position: "absolute",
                         top: `${pos.y}%`,
