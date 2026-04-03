@@ -80,6 +80,8 @@ export default function Navbar() {
           <ThemeSwitcher />
           <button
             type="button"
+            aria-label="Toggle navigation menu"
+            aria-expanded={open}
             onClick={() => setOpen((o) => !o)}
             style={{
               background: "rgba(255,255,255,0.4)",

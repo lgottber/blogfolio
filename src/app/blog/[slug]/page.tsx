@@ -14,8 +14,15 @@ export async function generateMetadata(
   const post = getPost(slug);
   if (!post) return {};
   return {
-    title: `${post.title} — Lauren's Blogfolio`,
+    title: post.title,
     description: post.description,
+    openGraph: {
+      type: "article",
+      title: post.title,
+      description: post.description,
+      publishedTime: post.date,
+      authors: ["Lauren"],
+    },
   };
 }
 

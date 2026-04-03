@@ -3,7 +3,11 @@ import Image from "next/image";
 import OSWindow from "@/components/OSWindow";
 import resumeData from "../../../data/resume.json";
 
-export const metadata: Metadata = { title: "about me — Lauren's Blogfolio" };
+export const metadata: Metadata = {
+  title: "About Me",
+  description:
+    "Learn about Lauren — software engineer, music lover, cat mom. Resume, experience, and skills.",
+};
 
 const SKILL_COLORS: [string, string, string][] = [
   ["#ead8ff", "#c8aaf0", "#7a5890"],
