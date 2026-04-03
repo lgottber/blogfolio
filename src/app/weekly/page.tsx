@@ -9,7 +9,9 @@ import {
 import OSWindow from "@/components/OSWindow";
 
 export const metadata: Metadata = {
-  title: "weekly faves — Lauren's Blogfolio",
+  title: "Weekly Faves",
+  description:
+    "Lauren's weekly favorites — song of the week, current hair color, and more.",
 };
 
 export default function WeeklyPage() {

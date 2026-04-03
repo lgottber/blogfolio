@@ -4,7 +4,11 @@ import { getAllPosts } from "@/lib/posts";
 import PostCard from "@/components/PostCard";
 import OSWindow from "@/components/OSWindow";
 
-export const metadata: Metadata = { title: "blog — Lauren's Blogfolio" };
+export const metadata: Metadata = {
+  title: "Blog",
+  description:
+    "Thoughts, things I love, and whatever else — Lauren's blog posts.",
+};
 
 export default function BlogPage() {
   const posts = getAllPosts();
@@ -17,17 +21,18 @@ export default function BlogPage() {
 
       <OSWindow title="blog_entries/">
         <div style={{ padding: "14px 18px", textAlign: "center" }}>
-          <div
+          <h1
             style={{
               fontFamily: "'Nunito', sans-serif",
               fontSize: "17px",
               fontWeight: 700,
               color: "#7a5890",
               lineHeight: 1.8,
+              margin: 0,
             }}
           >
             ✦ all posts ✦
-          </div>
+          </h1>
           <p
             style={{
               fontFamily: "'Nunito', sans-serif",
