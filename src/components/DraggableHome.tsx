@@ -18,6 +18,7 @@ import {
   useSortable,
 } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
+import Image from "next/image";
 import OSWindow from "./OSWindow";
 import WeeklyWidget from "./WeeklyWidget";
 import CatPainter from "./CatPainter";
@@ -81,130 +82,114 @@ function SortableTile(
 function WelcomeTile() {
   return (
     <OSWindow title="welcome.txt" fillHeight>
-      <div style={{ padding: "18px 20px" }}>
+      <div style={{ display: "flex", height: "100%" }}>
+        {/* Photo — left half */}
         <div
           style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "12px",
-            marginBottom: "14px",
+            position: "relative",
+            width: "40%",
+            flexShrink: 0,
+            borderRight: "1px solid var(--window-border)",
           }}
         >
+          <Image
+            src="/photo.jpg"
+            alt="Lauren"
+            fill
+            style={{ objectFit: "cover", objectPosition: "center top" }}
+            unoptimized
+          />
+        </div>
+
+        {/* Content — right half */}
+        <div style={{ flex: 1, padding: "18px 20px", overflow: "auto" }}>
+          <div style={{ marginBottom: "14px" }}>
+            <h1
+              style={{
+                fontFamily: "'Nunito', sans-serif",
+                fontSize: "20px",
+                fontWeight: 800,
+                color: "var(--text)",
+                margin: 0,
+              }}
+            >
+              Welcome to My Blogfolio!
+            </h1>
+          </div>
           <div
             style={{
-              width: "56px",
-              height: "56px",
-              flexShrink: 0,
-              background:
-                "linear-gradient(135deg, var(--lavender-soft), var(--pink-soft))",
-              border: "2px solid var(--window-border)",
-              borderRadius: "50%",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              fontSize: "26px",
-              boxShadow: "2px 2px 0 var(--window-border)",
+              borderTop: "1px dashed var(--lavender-soft)",
+              marginBottom: "12px",
+            }}
+          />
+          <p
+            style={{
+              fontFamily: "'Nunito', sans-serif",
+              fontSize: "15px",
+              color: "var(--text-mid)",
+              lineHeight: 1.85,
+              margin: "0 0 12px",
             }}
           >
-            <span className="heartbeat">✿</span>
+            I&apos;m a software engineer who loves a creative outlet. I hope you
+            have fun exploring my projects, listening to my weekly music picks,
+            and maybe even reading a blog post or two! Feel free to rearrange
+            the tiles however you like, everything is draggable!
+          </p>
+          <div
+            style={{
+              display: "flex",
+              gap: "6px",
+              flexWrap: "wrap",
+              marginBottom: "12px",
+            }}
+          >
+            {[
+              { icon: "✍️", text: "amatuer artist" },
+              { icon: "🎵", text: "music lover" },
+              { icon: "🐱", text: "cat mom" },
+              { icon: "✨", text: "camp fanatic" },
+            ].map(({ icon, text }) => (
+              <span
+                key={text}
+                style={{
+                  fontFamily: "'Nunito', sans-serif",
+                  fontSize: "13px",
+                  fontWeight: 700,
+                  background: "var(--lavender-pale)",
+                  color: "var(--text-mid)",
+                  border: "1px solid var(--window-border)",
+                  borderRadius: "20px",
+                  padding: "4px 8px",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "4px",
+                }}
+              >
+                <span style={{ fontSize: "9px" }}>{icon}</span> {text}
+              </span>
+            ))}
           </div>
-          <div>
-            <div
-              style={{
-                fontFamily: "'Nunito', sans-serif",
-                fontSize: "16px",
-                fontWeight: 700,
-                color: "var(--text)",
-                lineHeight: 2,
-              }}
-            >
-              Hello world!
-            </div>
-            <div
-              style={{
-                fontFamily: "'Nunito', sans-serif",
-                fontSize: "14px",
-                fontWeight: 700,
-                color: "var(--text-light)",
-                lineHeight: 2,
-              }}
-            >
-              Welcome to my blogfolio!
-            </div>
+          <div style={{ display: "flex", gap: "3px" }}>
+            {[
+              "var(--pink-mid)",
+              "var(--lavender)",
+              "var(--mint)",
+              "var(--peach)",
+              "var(--pink-soft)",
+              "var(--lavender-soft)",
+            ].map((c, i) => (
+              <div
+                key={i}
+                style={{
+                  flex: 1,
+                  height: "8px",
+                  background: c,
+                  borderRadius: "4px",
+                }}
+              />
+            ))}
           </div>
-        </div>
-        <div
-          style={{
-            borderTop: "1px dashed var(--lavender-soft)",
-            marginBottom: "12px",
-          }}
-        />
-        <p
-          style={{
-            fontFamily: "'Nunito', sans-serif",
-            fontSize: "15px",
-            color: "var(--text-mid)",
-            lineHeight: 1.85,
-            margin: "0 0 12px",
-          }}
-        >
-          I'm a software engineer who loves a creative outlet. I hope you have fun exploring my projects, 
-          listening to my weekly music picks, and maybe even reading a blog post or two! 
-          Feel free to rearrange the tiles however you like, everything is draggable!
-        </p>
-        <div
-          style={{
-            display: "flex",
-            gap: "6px",
-            flexWrap: "wrap",
-            marginBottom: "12px",
-          }}
-        >
-          {[
-            { icon: "✍️", text: "amatuer artist" },
-            { icon: "🎵", text: "music lover" },
-            { icon: "🐱", text: "cat mom" },
-            { icon: "✨", text: "camp fanatic" },
-          ].map(({ icon, text }) => (
-            <span
-              key={text}
-              style={{
-                fontFamily: "'Nunito', sans-serif",
-                fontSize: "13px",
-                fontWeight: 700,
-                background: "var(--lavender-pale)",
-                color: "var(--text-mid)",
-                border: "1px solid var(--window-border)",
-                borderRadius: "20px",
-                padding: "4px 8px",
-                display: "flex",
-                alignItems: "center",
-                gap: "4px",
-              }}
-            >
-              <span style={{ fontSize: "9px" }}>{icon}</span> {text}
-            </span>
-          ))}
-        </div>
-        <div style={{ display: "flex", gap: "3px" }}>
-          {[
-            "var(--pink-mid)",
-            "var(--lavender)",
-            "var(--mint)",
-            "var(--peach)",
-            "var(--pink-soft)",
-            "var(--lavender-soft)",
-          ].map((c, i) => (
-            <div
-              key={i}
-              style={{
-                flex: 1,
-                height: "8px",
-                background: c,
-                borderRadius: "4px",
-              }}
-            />
-          ))}
         </div>
       </div>
     </OSWindow>

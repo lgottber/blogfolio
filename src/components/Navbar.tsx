@@ -143,27 +143,6 @@ export default function Navbar() {
         </div>
       )}
 
-      {/* Marquee strip */}
-      <div
-        className="site-marquee-bar"
-        style={{
-          padding: "3px 0",
-          fontSize: "13px",
-          fontFamily: "'Nunito', sans-serif",
-          fontWeight: 700,
-          color: "var(--text-light)",
-          overflow: "hidden",
-        }}
-      >
-        <div className="marquee-wrapper">
-          <span className="marquee-content">
-            ♥ welcome to lauren&apos;s blogfolio ♥ best viewed on desktop ♥
-            always under construction ♥ spread love ♥ stay cute ✦ loading... ♥
-            thanks for visiting ✦ you found my site ♥ welcome to lauren&apos;s
-            blogfolio ♥
-          </span>
-        </div>
-      </div>
     </header>
   );
 }
