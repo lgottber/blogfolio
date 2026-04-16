@@ -1,10 +1,16 @@
 {
   "current": {
+    "title": "Don't Leave Me This Way",
+    "artist": "Thelma Houston",
+    "note": "she's an icon",
+    "week": "2026-04-13",
+    "spotifyId": "2rBBhFXtuMoGuwYTSDpAdF"
+  },
+  "herstory": [{
     "title": "Supermodel",
     "artist": "RuPaul",
     "note": "you better WORK",
-    "week": "2000-01-03",
+    "week": "2026-04-06",
     "spotifyId": "36Rpz4MZQhGknLEmTmHr8v"
-  },
-  "herstory": []
+  }]
 }
