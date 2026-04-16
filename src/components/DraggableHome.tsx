@@ -118,7 +118,7 @@ function WelcomeTile() {
                 lineHeight: 2,
               }}
             >
-              hi, i&apos;m lauren! ♥
+              Hello world!
             </div>
             <div
               style={{
@@ -129,7 +129,7 @@ function WelcomeTile() {
                 lineHeight: 2,
               }}
             >
-              ✦ welcome to my little corner
+              Welcome to my blogfolio!
             </div>
           </div>
         </div>
@@ -148,9 +148,9 @@ function WelcomeTile() {
             margin: "0 0 12px",
           }}
         >
-          this is my personal site where i share things i love — music, hair
-          colors, blog posts, and my cat amari ♥ always under construction &amp;
-          made with lots of sparkles ✦
+          I'm a software engineer who loves a creative outlet. I hope you have fun exploring my projects, 
+          listening to my weekly music picks, and maybe even reading a blog post or two! 
+          Feel free to rearrange the tiles however you like, everything is draggable!
         </p>
         <div
           style={{
@@ -161,10 +161,10 @@ function WelcomeTile() {
           }}
         >
           {[
-            { icon: "✍️", text: "blogger" },
+            { icon: "✍️", text: "amatuer artist" },
             { icon: "🎵", text: "music lover" },
             { icon: "🐱", text: "cat mom" },
-            { icon: "✨", text: "always online" },
+            { icon: "✨", text: "camp fanatic" },
           ].map(({ icon, text }) => (
             <span
               key={text}

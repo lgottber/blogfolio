@@ -63,13 +63,10 @@ export default function Soundboard() {
 
   return (
     <div
+      className="os-window"
       style={{
-        border: "2px solid var(--window-border)",
-        borderRadius: minimized ? "4px 4px 0 0" : "4px",
-        borderBottom: minimized ? "none" : "2px solid var(--window-border)",
-        background: "var(--window-bg)",
-        boxShadow: "3px 3px 0 var(--window-shadow)",
-        overflow: "hidden",
+        borderRadius: minimized ? "8px 8px 0 0" : undefined,
+        borderBottom: minimized ? "none" : undefined,
         fontFamily: "'Nunito', sans-serif",
         userSelect: "none",
         width: "100%",
@@ -78,17 +75,8 @@ export default function Soundboard() {
       {/* Title bar */}
       <div
         {...(dragHandle as React.HTMLAttributes<HTMLElement>)}
-        style={{
-          background:
-            "linear-gradient(90deg, var(--lavender-soft), var(--pink-soft))",
-          borderBottom: "1px solid var(--window-border)",
-          padding: "3px 6px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          height: "22px",
-          cursor: isDraggable ? "grab" : undefined,
-        }}
+        className="os-titlebar"
+        style={{ cursor: isDraggable ? "grab" : undefined }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: "5px" }}>
           <span className="os-titlebar-title">
