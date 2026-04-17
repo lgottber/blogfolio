@@ -49,7 +49,7 @@ export default function ThemeSwitcher() {
           borderRadius: "20px",
           padding: "5px 12px 5px 8px",
           cursor: "pointer",
-          fontFamily: "'Nunito', sans-serif",
+          fontFamily: "var(--font-nunito), sans-serif",
           fontSize: "13px",
           color: active.color,
         }}
@@ -80,7 +80,7 @@ export default function ThemeSwitcher() {
                 "linear-gradient(90deg, var(--lavender-soft), var(--pink-soft))",
               borderBottom: "1px solid var(--window-border)",
               padding: "4px 8px",
-              fontFamily: "'Nunito', sans-serif",
+              fontFamily: "var(--font-nunito), sans-serif",
               fontSize: "13px",
               color: "var(--text-mid)",
             }}
@@ -122,7 +122,7 @@ export default function ThemeSwitcher() {
               />
               <span
                 style={{
-                  fontFamily: "'Nunito', sans-serif",
+                  fontFamily: "var(--font-nunito), sans-serif",
                   fontSize: "13px",
                   color: current === t.id ? t.color : "#7a5890",
                 }}

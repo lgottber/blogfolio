@@ -30,10 +30,10 @@ export default function WeeklyWidget({ song, hairColor }: Props) {
           <div style={{ flex: 1, minWidth: "200px" }}>
             <div
               style={{
-                fontFamily: "'Nunito', sans-serif",
+                fontFamily: "var(--font-nunito), sans-serif",
                 fontSize: "13px",
                 fontWeight: 700,
-                color: "#b098c8",
+                color: "var(--text-light)",
                 letterSpacing: "1px",
                 marginBottom: "10px",
               }}
@@ -64,14 +64,14 @@ export default function WeeklyWidget({ song, hairColor }: Props) {
             {song.note && (
               <p
                 style={{
-                  fontFamily: "'Nunito', sans-serif",
+                  fontFamily: "var(--font-nunito), sans-serif",
                   fontSize: "14px",
-                  color: "#7a5890",
+                  color: "var(--text-mid)",
                   fontStyle: "italic",
                   marginTop: "8px",
                   padding: "5px 10px",
-                  background: "#f4eeff",
-                  border: "1px dashed #c8aaf0",
+                  background: "var(--lavender-pale)",
+                  border: "1px dashed var(--window-border)",
                   borderRadius: "4px",
                 }}
               >
@@ -84,10 +84,10 @@ export default function WeeklyWidget({ song, hairColor }: Props) {
           <div style={{ flex: 1, minWidth: "200px" }}>
             <div
               style={{
-                fontFamily: "'Nunito', sans-serif",
+                fontFamily: "var(--font-nunito), sans-serif",
                 fontSize: "13px",
                 fontWeight: 700,
-                color: "#b098c8",
+                color: "var(--text-light)",
                 letterSpacing: "1px",
                 marginBottom: "10px",
               }}
@@ -106,7 +106,7 @@ export default function WeeklyWidget({ song, hairColor }: Props) {
                     background: hairColor.hex,
                     border: "3px solid white",
                     boxShadow:
-                      `2px 2px 0 #c8aaf0, 0 0 0 2px ${hairColor.hex}55`,
+                      `2px 2px 0 var(--window-border), 0 0 0 2px ${hairColor.hex}55`,
                   }}
                 />
                 <div
@@ -126,10 +126,10 @@ export default function WeeklyWidget({ song, hairColor }: Props) {
               <div style={{ flex: 1, minWidth: 0 }}>
                 <div
                   style={{
-                    fontFamily: "'Nunito', sans-serif",
+                    fontFamily: "var(--font-nunito), sans-serif",
                     fontSize: "16px",
                     fontWeight: 700,
-                    color: "#3a2858",
+                    color: "var(--text)",
                     lineHeight: 1.7,
                   }}
                 >
@@ -141,9 +141,9 @@ export default function WeeklyWidget({ song, hairColor }: Props) {
             {hairColor.note && (
               <p
                 style={{
-                  fontFamily: "'Nunito', sans-serif",
+                  fontFamily: "var(--font-nunito), sans-serif",
                   fontSize: "14px",
-                  color: "#7a5890",
+                  color: "var(--text-mid)",
                   fontStyle: "italic",
                   marginTop: "8px",
                   padding: "5px 10px",
@@ -168,10 +168,10 @@ export default function WeeklyWidget({ song, hairColor }: Props) {
         >
           <span
             style={{
-              fontFamily: "'Nunito', sans-serif",
+              fontFamily: "var(--font-nunito), sans-serif",
               fontSize: "14px",
               fontWeight: 700,
-              color: "#b098c8",
+              color: "var(--text-light)",
             }}
           >
             wk of {formatWeek(song.week)}
@@ -179,14 +179,14 @@ export default function WeeklyWidget({ song, hairColor }: Props) {
           <Link
             href="/weekly"
             style={{
-              fontFamily: "'Nunito', sans-serif",
+              fontFamily: "var(--font-nunito), sans-serif",
               fontSize: "14px",
               fontWeight: 700,
-              color: "#7a5890",
+              color: "var(--text-mid)",
               textDecoration: "none",
               padding: "3px 8px",
-              border: "1px solid #c8aaf0",
-              background: "#ead8ff",
+              border: "1px solid var(--window-border)",
+              background: "var(--lavender-soft)",
               borderRadius: "3px",
             }}
           >

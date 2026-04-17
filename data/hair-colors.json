@@ -1,9 +1,14 @@
 {
   "current": {
+    "name": "Blink",
+    "hex": "#f8a39d",
+    "note": "Some blonde, some pink, but always a blink",
+    "week": "2026-04-06"
+    },
+  "herstory": [{
     "name": "Neon Pink",
     "hex": "#ff1493",
     "note": "they were out of soft pink",
-    "week": "2026-03-10"
-  },
-  "herstory": []
+    "week": "2026-04-06"
+    }]
 }

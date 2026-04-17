@@ -34,7 +34,7 @@ export default function WeeklyPage() {
         <div style={{ padding: "20px 24px", textAlign: "center" }}>
           <div
             style={{
-              fontFamily: "'Nunito', sans-serif",
+              fontFamily: "var(--font-nunito), sans-serif",
               fontSize: "18px",
               fontWeight: 700,
               color: "var(--text)",
@@ -44,39 +44,16 @@ export default function WeeklyPage() {
           >
             ✦ weekly faves ✦
           </div>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              gap: "6px",
-              marginBottom: "10px",
-            }}
-          >
-            {["♪", "✿", "♥", "✂", "✦", "♥", "✿", "♪"].map((c, i) => (
-              <span
-                key={i}
-                style={{
-                  fontFamily: "'Nunito', sans-serif",
-                  fontSize: "15px",
-                  fontWeight: 700,
-                  color: "var(--lavender)",
-                  opacity: 0.7,
-                }}
-              >
-                {c}
-              </span>
-            ))}
-          </div>
           <p
             style={{
-              fontFamily: "'Nunito', sans-serif",
+              fontFamily: "var(--font-nunito), sans-serif",
               fontSize: "15px",
               color: "var(--text-mid)",
               margin: 0,
             }}
           >
             a running log of what i was listening to &amp; what color my hair
-            was each week ♥
+            was each week 
           </p>
         </div>
       </OSWindow>
@@ -132,7 +109,7 @@ function WeekCard(
       >
         <span
           style={{
-            fontFamily: "'Nunito', sans-serif",
+            fontFamily: "var(--font-nunito), sans-serif",
             fontSize: "14px",
             fontWeight: 700,
             color: "var(--text-mid)",
@@ -144,7 +121,7 @@ function WeekCard(
           ? (
             <span
               style={{
-                fontFamily: "'Nunito', sans-serif",
+                fontFamily: "var(--font-nunito), sans-serif",
                 fontSize: "14px",
                 fontWeight: 700,
                 background: "var(--lavender)",
@@ -159,7 +136,7 @@ function WeekCard(
           : (
             <span
               style={{
-                fontFamily: "'Nunito', sans-serif",
+                fontFamily: "var(--font-nunito), sans-serif",
                 fontSize: "14px",
                 fontWeight: 700,
                 color: "var(--text-light)",
@@ -222,7 +199,7 @@ function WeekCard(
             <div style={{ minWidth: 0 }}>
               <div
                 style={{
-                  fontFamily: "'Nunito', sans-serif",
+                  fontFamily: "var(--font-nunito), sans-serif",
                   fontSize: "13px",
                   fontWeight: 700,
                   color: "var(--lavender)",
@@ -234,7 +211,7 @@ function WeekCard(
               </div>
               <div
                 style={{
-                  fontFamily: "'Nunito', sans-serif",
+                  fontFamily: "var(--font-nunito), sans-serif",
                   fontSize: "15px",
                   fontWeight: 700,
                   color: "var(--text)",
@@ -246,7 +223,7 @@ function WeekCard(
               </div>
               <div
                 style={{
-                  fontFamily: "'Nunito', sans-serif",
+                  fontFamily: "var(--font-nunito), sans-serif",
                   fontSize: "14px",
                   color: "var(--text-mid)",
                   marginTop: "1px",
@@ -257,7 +234,7 @@ function WeekCard(
               {song.note && (
                 <div
                   style={{
-                    fontFamily: "'Nunito', sans-serif",
+                    fontFamily: "var(--font-nunito), sans-serif",
                     fontSize: "13px",
                     color: "var(--text-light)",
                     fontStyle: "italic",
@@ -311,7 +288,7 @@ function WeekCard(
               <div style={{ minWidth: 0 }}>
                 <div
                   style={{
-                    fontFamily: "'Nunito', sans-serif",
+                    fontFamily: "var(--font-nunito), sans-serif",
                     fontSize: "13px",
                     fontWeight: 700,
                     color: swatchHex,
@@ -324,7 +301,7 @@ function WeekCard(
                 </div>
                 <div
                   style={{
-                    fontFamily: "'Nunito', sans-serif",
+                    fontFamily: "var(--font-nunito), sans-serif",
                     fontSize: "15px",
                     fontWeight: 700,
                     color: "var(--text)",
@@ -335,7 +312,7 @@ function WeekCard(
                 </div>
                 <div
                   style={{
-                    fontFamily: "'Nunito', sans-serif",
+                    fontFamily: "var(--font-nunito), sans-serif",
                     fontSize: "14px",
                     fontWeight: 700,
                     color: "var(--text-light)",
@@ -347,7 +324,7 @@ function WeekCard(
                 {color.note && (
                   <div
                     style={{
-                      fontFamily: "'Nunito', sans-serif",
+                      fontFamily: "var(--font-nunito), sans-serif",
                       fontSize: "13px",
                       color: "var(--text-light)",
                       fontStyle: "italic",

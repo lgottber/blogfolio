@@ -189,14 +189,11 @@ export default function CatPainter() {
 
   return (
     <div
+      className="os-window"
       style={{
-        border: "2px solid var(--window-border)",
-        borderRadius: minimized ? "4px 4px 0 0" : "4px",
-        borderBottom: minimized ? "none" : "2px solid var(--window-border)",
-        background: "var(--window-bg)",
-        boxShadow: "3px 3px 0 var(--window-shadow)",
-        overflow: "hidden",
-        fontFamily: "'Nunito', sans-serif",
+        borderRadius: minimized ? "8px 8px 0 0" : undefined,
+        borderBottom: minimized ? "none" : undefined,
+        fontFamily: "var(--font-nunito), sans-serif",
         userSelect: "none",
         width: "100%",
         height: minimized ? undefined : "100%",
@@ -207,17 +204,8 @@ export default function CatPainter() {
       {/* ── Title bar ── */}
       <div
         {...(dragHandle as React.HTMLAttributes<HTMLElement>)}
-        style={{
-          background:
-            "linear-gradient(90deg, var(--lavender-soft), var(--pink-soft))",
-          borderBottom: "1px solid var(--window-border)",
-          padding: "3px 6px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          height: "22px",
-          cursor: isDraggable ? "grab" : undefined,
-        }}
+        className="os-titlebar"
+        style={{ cursor: isDraggable ? "grab" : undefined }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: "5px" }}>
           <span className="os-titlebar-title">
@@ -261,7 +249,7 @@ export default function CatPainter() {
           >
             <span
               style={{
-                fontFamily: "'Nunito', sans-serif",
+                fontFamily: "var(--font-nunito), sans-serif",
                 fontSize: "15px",
                 fontWeight: 700,
                 color: "var(--text-mid)",
@@ -410,7 +398,6 @@ export default function CatPainter() {
                   loading="eager"
                   draggable={false}
                   style={{ objectFit: "contain" }}
-                  unoptimized
                 />
 
                 {/* Draggable PNG accessories */}
@@ -562,27 +549,6 @@ export default function CatPainter() {
                 800×800
               </span>
             </div>
-          </div>
-
-          {/* Pusheen gif */}
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              padding: "8px 0 4px",
-              flex: 1,
-            }}
-          >
-            <img
-              src="/pusheen.gif"
-              alt="pusheen"
-              draggable={false}
-              style={{
-                maxHeight: "100%",
-                imageRendering: "pixelated",
-                objectFit: "contain",
-              }}
-            />
           </div>
         </div>
         {/* end overflow:hidden */}

@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import OSWindow from "@/components/OSWindow";
 import resumeData from "../../../data/resume.json";
 
-export const metadata: Metadata = { title: "about me — Lauren's Blogfolio" };
+export const metadata: Metadata = {
+  title: "About Me",
+  description:
+    "Learn about Lauren — software engineer, music lover, cat mom. Resume, experience, and skills.",
+};
 
 const SKILL_COLORS: [string, string, string][] = [
   ["#ead8ff", "#c8aaf0", "#7a5890"],
@@ -37,50 +40,25 @@ export default function AboutMePage() {
               }}
             >
               {/* Photo */}
-              <div
-                style={{
-                  flexShrink: 0,
-                  border: "3px solid #c8aaf0",
-                  borderRadius: "8px",
-                  overflow: "hidden",
-                  boxShadow: "3px 3px 0 #c8aaf0",
-                  background: "#f4eeff",
-                  width: "100px",
-                  height: "100px",
-                }}
-              >
-                <Image
-                  src="/photo.jpg"
-                  alt={r.name}
-                  width={100}
-                  height={100}
-                  style={{
-                    objectFit: "cover",
-                    width: "100%",
-                    height: "100%",
-                    transform: "scale(1)",
-                  }}
-                />
-              </div>
-
               <div>
                 <h1
                   style={{
-                    fontFamily: "'Nunito', sans-serif",
-                    fontSize: "14px",
+                    fontFamily: "var(--font-nunito), sans-serif",
+                    fontSize: "22px",
+                    fontWeight: 800,
                     color: "#3a2858",
                     margin: "0 0 6px",
-                    lineHeight: 1.6,
+                    lineHeight: 1.4,
                   }}
                 >
                   {r.name}
                 </h1>
                 <div
                   style={{
-                    fontFamily: "'Nunito', sans-serif",
-                    fontSize: "8px",
+                    fontFamily: "var(--font-nunito), sans-serif",
+                    fontSize: "15px",
                     color: "#a080c0",
-                    letterSpacing: "1px",
+                    letterSpacing: "0.5px",
                   }}
                 >
                   {r.title}
@@ -113,7 +91,7 @@ export default function AboutMePage() {
                 >
                   <span
                     style={{
-                      fontFamily: "'Nunito', sans-serif",
+                      fontFamily: "var(--font-nunito), sans-serif",
                       fontSize: "15px",
                       fontWeight: 700,
                       color: "#c8aaf0",
@@ -124,7 +102,7 @@ export default function AboutMePage() {
                   </span>
                   <span
                     style={{
-                      fontFamily: "'Nunito', sans-serif",
+                      fontFamily: "var(--font-nunito), sans-serif",
                       fontSize: "14px",
                       color: "#7a5890",
                     }}
@@ -151,7 +129,7 @@ export default function AboutMePage() {
             {r.summary && (
               <p
                 style={{
-                  fontFamily: "'Nunito', sans-serif",
+                  fontFamily: "var(--font-nunito), sans-serif",
                   fontSize: "16px",
                   color: "#7a5890",
                   lineHeight: 1.8,
@@ -206,7 +184,7 @@ export default function AboutMePage() {
               >
                 <div
                   style={{
-                    fontFamily: "'Nunito', sans-serif",
+                    fontFamily: "var(--font-nunito), sans-serif",
                     fontSize: "17px",
                     fontWeight: 700,
                     color: "#3a2858",
@@ -226,7 +204,7 @@ export default function AboutMePage() {
                 </div>
                 <span
                   style={{
-                    fontFamily: "'Nunito', sans-serif",
+                    fontFamily: "var(--font-nunito), sans-serif",
                     fontSize: "13px",
                     color: "#b098c8",
                     background: "#f4eeff",
@@ -267,7 +245,7 @@ export default function AboutMePage() {
                     >
                       <span
                         style={{
-                          fontFamily: "'Nunito', sans-serif",
+                          fontFamily: "var(--font-nunito), sans-serif",
                           fontSize: "15px",
                           fontWeight: 700,
                           color: "#7a5890",
@@ -277,7 +255,7 @@ export default function AboutMePage() {
                       </span>
                       <span
                         style={{
-                          fontFamily: "'Nunito', sans-serif",
+                          fontFamily: "var(--font-nunito), sans-serif",
                           fontSize: "13px",
                           color: "#b098c8",
                         }}
@@ -308,7 +286,7 @@ export default function AboutMePage() {
                             style={{
                               color: "#c8aaf0",
                               flexShrink: 0,
-                              fontFamily: "'Nunito', sans-serif",
+                              fontFamily: "var(--font-nunito), sans-serif",
                               fontSize: "15px",
                               fontWeight: 700,
                               marginTop: "3px",
@@ -318,7 +296,7 @@ export default function AboutMePage() {
                           </span>
                           <span
                             style={{
-                              fontFamily: "'Nunito', sans-serif",
+                              fontFamily: "var(--font-nunito), sans-serif",
                               fontSize: "15px",
                               color: "#5a4070",
                               lineHeight: 1.65,
@@ -362,7 +340,7 @@ export default function AboutMePage() {
                 <div>
                   <div
                     style={{
-                      fontFamily: "'Nunito', sans-serif",
+                      fontFamily: "var(--font-nunito), sans-serif",
                       fontSize: "17px",
                       fontWeight: 700,
                       color: "#3a2858",
@@ -373,7 +351,7 @@ export default function AboutMePage() {
                   </div>
                   <div
                     style={{
-                      fontFamily: "'Nunito', sans-serif",
+                      fontFamily: "var(--font-nunito), sans-serif",
                       fontSize: "15px",
                       color: "#a080c0",
                       fontWeight: 700,
@@ -385,7 +363,7 @@ export default function AboutMePage() {
                   {edu.note && (
                     <div
                       style={{
-                        fontFamily: "'Nunito', sans-serif",
+                        fontFamily: "var(--font-nunito), sans-serif",
                         fontSize: "14px",
                         color: "#b098c8",
                         fontStyle: "italic",
@@ -398,8 +376,8 @@ export default function AboutMePage() {
                 </div>
                 <span
                   style={{
-                    fontFamily: "'Nunito', sans-serif",
-                    fontSize: "6px",
+                    fontFamily: "var(--font-nunito), sans-serif",
+                    fontSize: "13px",
                     color: "#b098c8",
                     background: "#f4eeff",
                     border: "1px solid #c8aaf0",
@@ -438,11 +416,12 @@ export default function AboutMePage() {
               <div key={label}>
                 <div
                   style={{
-                    fontFamily: "'Nunito', sans-serif",
-                    fontSize: "7px",
+                    fontFamily: "var(--font-nunito), sans-serif",
+                    fontSize: "13px",
+                    fontWeight: 700,
                     color: "#7a5890",
                     marginBottom: "8px",
-                    letterSpacing: "1px",
+                    letterSpacing: "0.5px",
                   }}
                 >
                   {label} /
@@ -452,8 +431,9 @@ export default function AboutMePage() {
                     <span
                       key={skill}
                       style={{
-                        fontFamily: "'Nunito', sans-serif",
-                        fontSize: "7px",
+                        fontFamily: "var(--font-nunito), sans-serif",
+                        fontSize: "13px",
+                        fontWeight: 700,
                         background: bg,
                         border: `2px solid ${border}`,
                         color: text,

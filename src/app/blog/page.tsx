@@ -19,7 +19,7 @@ export default function BlogPage() {
         <div style={{ padding: "14px 18px", textAlign: "center" }}>
           <div
             style={{
-              fontFamily: "'Nunito', sans-serif",
+              fontFamily: "var(--font-nunito), sans-serif",
               fontSize: "17px",
               fontWeight: 700,
               color: "#7a5890",
@@ -28,16 +28,6 @@ export default function BlogPage() {
           >
             ✦ all posts ✦
           </div>
-          <p
-            style={{
-              fontFamily: "'Nunito', sans-serif",
-              fontSize: "15px",
-              color: "#a080c0",
-              marginTop: "6px",
-            }}
-          >
-            thoughts, things i love, and whatever else ♥
-          </p>
         </div>
       </OSWindow>
 
@@ -49,7 +39,7 @@ export default function BlogPage() {
                 style={{
                   textAlign: "center",
                   padding: "40px 20px",
-                  fontFamily: "'Nunito', sans-serif",
+                  fontFamily: "var(--font-nunito), sans-serif",
                   fontSize: "16px",
                   fontWeight: 700,
                   color: "#b098c8",

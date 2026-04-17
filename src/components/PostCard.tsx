@@ -43,9 +43,9 @@ export default function PostCard({ post }: { post: PostMeta }) {
           {post.description && (
             <p
               style={{
-                fontFamily: "'Nunito', sans-serif",
+                fontFamily: "var(--font-nunito), sans-serif",
                 fontSize: "15px",
-                color: "#7a5890",
+                color: "var(--text-mid)",
                 margin: "0 0 8px",
                 lineHeight: 1.6,
               }}
@@ -68,7 +68,7 @@ export default function PostCard({ post }: { post: PostMeta }) {
                 <span
                   key={t}
                   style={{
-                    fontFamily: "'Nunito', sans-serif",
+                    fontFamily: "var(--font-nunito), sans-serif",
                     fontSize: "12px",
                     color: tag.text,
                     border: `1px solid ${tag.border}`,
@@ -83,9 +83,9 @@ export default function PostCard({ post }: { post: PostMeta }) {
             </div>
             <time
               style={{
-                fontFamily: "'Nunito', sans-serif",
-                fontSize: "6px",
-                color: "#b098c8",
+                fontFamily: "var(--font-nunito), sans-serif",
+                fontSize: "13px",
+                color: "var(--text-light)",
               }}
             >
               {new Date(post.date).toLocaleDateString("en-US", {

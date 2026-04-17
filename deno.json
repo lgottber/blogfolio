@@ -1,6 +1,6 @@
 {
   "tasks": {
-    "dev": "deno run -A --node-modules-dir npm:next dev --no-turbopack",
+    "dev": "deno run -A --node-modules-dir npm:next dev --webpack",
     "build": "deno run -A --node-modules-dir npm:next build",
     "start": "deno run -A --node-modules-dir npm:next start",
     "lint": "deno lint && deno fmt ."

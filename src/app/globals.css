@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Press+Start+2P&display=swap");
-
 @import "tailwindcss";
 
 :root, [data-theme="lavender"] {
@@ -192,7 +190,7 @@ html, body {
 
 body {
   color: var(--text);
-  font-family: "Nunito", sans-serif;
+  font-family: var(--font-nunito), sans-serif;
   font-size: 16px;
   line-height: 1.7;
   overflow-x: hidden;
@@ -225,11 +223,11 @@ body {
 
 /* ── Animations ── */
 @keyframes marquee {
-  0% {
-    transform: translateX(100vw);
+  from {
+    transform: translateX(0);
   }
-  100% {
-    transform: translateX(-100%);
+  to {
+    transform: translateX(-50%);
   }
 }
 @keyframes blink {
@@ -312,12 +310,17 @@ body {
 /* Marquee */
 .marquee-wrapper {
   overflow: hidden;
-  white-space: nowrap;
   width: 100%;
 }
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 20s linear infinite;
+}
 .marquee-content {
-  display: inline-block;
-  animation: marquee 30s linear infinite;
+  white-space: nowrap;
+  flex-shrink: 0;
+  padding-right: 3rem;
 }
 
 /* ── OS Window chrome ── */
@@ -341,7 +344,7 @@ body {
 }
 
 .os-titlebar-title {
-  font-family: "Nunito", sans-serif;
+  font-family: var(--font-nunito), sans-serif;
   font-size: 14px;
   color: var(--text-mid);
   letter-spacing: 0.5px;
@@ -364,7 +367,7 @@ body {
   border-radius: 2px;
   border: 1.5px solid rgba(0, 0, 0, 0.12);
   display: inline-block;
-  font-family: "Nunito", sans-serif;
+  font-family: var(--font-nunito), sans-serif;
   font-size: 5px;
   line-height: 9px;
   text-align: center;
@@ -375,7 +378,7 @@ body {
 }
 
 .y2k-btn {
-  font-family: "Nunito", sans-serif;
+  font-family: var(--font-nunito), sans-serif;
   font-size: 8px;
   padding: 8px 16px;
   border: 2px solid var(--lavender);
@@ -420,12 +423,12 @@ body {
 
 /* ── MDX Prose ── */
 .y2k-prose {
-  font-family: "Nunito", sans-serif;
+  font-family: var(--font-nunito), sans-serif;
   font-size: 14px;
   color: var(--text);
 }
 .y2k-prose h1, .y2k-prose h2, .y2k-prose h3 {
-  font-family: "Nunito", sans-serif;
+  font-family: var(--font-nunito), sans-serif;
   color: var(--text-mid);
   margin: 1.8rem 0 0.8rem;
   line-height: 1.7;
@@ -463,7 +466,7 @@ body {
   color: var(--lavender);
 }
 .y2k-prose code {
-  font-family: "Nunito", sans-serif;
+  font-family: var(--font-nunito), sans-serif;
   font-size: 0.68em;
   background: var(--mint-soft);
   border: 1px solid var(--mint);
@@ -549,6 +552,27 @@ body {
   }
   .nav-hamburger {
     display: flex !important;
+  }
+
+  /* Home grid: single column on mobile */
+  .home-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Welcome split: stack vertically on mobile */
+  .welcome-split {
+    flex-direction: column;
+  }
+  .welcome-split-photo {
+    width: 100% !important;
+    height: 220px;
+    border-right: none !important;
+    border-bottom: 1px solid var(--window-border);
+  }
+
+  /* Disable fixed background on mobile (performance) */
+  body {
+    background-attachment: scroll;
   }
 }
 
