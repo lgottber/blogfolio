@@ -46,7 +46,7 @@ export default async function PostPage(
           >
             <time
               style={{
-                fontFamily: "'Nunito', sans-serif",
+                fontFamily: "var(--font-nunito), sans-serif",
                 fontSize: "15px",
                 fontWeight: 700,
                 color: "#b098c8",
@@ -62,7 +62,7 @@ export default async function PostPage(
               <span
                 key={tag}
                 style={{
-                  fontFamily: "'Nunito', sans-serif",
+                  fontFamily: "var(--font-nunito), sans-serif",
                   fontSize: "14px",
                   fontWeight: 700,
                   color: "#7a5890",
@@ -79,7 +79,7 @@ export default async function PostPage(
           {post.description && (
             <p
               style={{
-                fontFamily: "'Nunito', sans-serif",
+                fontFamily: "var(--font-nunito), sans-serif",
                 fontSize: "16px",
                 color: "#a080c0",
                 fontStyle: "italic",

@@ -24,7 +24,7 @@ const SOUNDS: Sound[] = [
     icon: "🙄",
     src: "/sounds/dontcare.mp3",
   },
-  { id: "sailor", label: "Sailor Moon", icon: "🌙", src: "/sounds/sailor.mp3" },
+  { id: "darlene", label: "Waaaa", icon: "🤠", src: "/sounds/darlene.mp3" },
   {
     id: "pretty",
     label: "Not Very Pretty",
@@ -67,7 +67,7 @@ export default function Soundboard() {
       style={{
         borderRadius: minimized ? "8px 8px 0 0" : undefined,
         borderBottom: minimized ? "none" : undefined,
-        fontFamily: "'Nunito', sans-serif",
+        fontFamily: "var(--font-nunito), sans-serif",
         userSelect: "none",
         width: "100%",
       }}
@@ -314,7 +314,7 @@ export default function Soundboard() {
                     {/* Channel label */}
                     <div
                       style={{
-                        fontFamily: "'Nunito', sans-serif",
+                        fontFamily: "var(--font-nunito), sans-serif",
                         fontSize: "5px",
                         color: "var(--text-mid)",
                         background: "var(--window-bg)",

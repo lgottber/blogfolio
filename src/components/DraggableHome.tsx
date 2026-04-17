@@ -63,11 +63,14 @@ function SortableTile(
         transition,
         opacity: isDragging ? 0.35 : 1,
         gridColumn,
-        alignSelf: id === "welcome" || id === "catpainter"
+        alignSelf: id === "welcome" || id === "catpainter" || id === "soundboard"
           ? "stretch"
           : "start",
-        display: id === "welcome" || id === "catpainter" ? "flex" : undefined,
-        flexDirection: id === "welcome" || id === "catpainter"
+        display: id === "welcome" || id === "catpainter" || id === "soundboard"
+          ? "flex"
+          : undefined,
+        flexDirection: id === "welcome" || id === "catpainter" ||
+            id === "soundboard"
           ? "column"
           : undefined,
       }}
@@ -82,9 +85,10 @@ function SortableTile(
 function WelcomeTile() {
   return (
     <OSWindow title="welcome.txt" fillHeight>
-      <div style={{ display: "flex", height: "100%" }}>
+      <div className="welcome-split" style={{ display: "flex", height: "100%" }}>
         {/* Photo — left half */}
         <div
+          className="welcome-split-photo"
           style={{
             position: "relative",
             width: "40%",
@@ -93,11 +97,12 @@ function WelcomeTile() {
           }}
         >
           <Image
-            src="/photo.jpg"
+            src="/laurenAnime.jpg"
             alt="Lauren"
             fill
+            priority
+            sizes="(max-width: 600px) 100vw, 40vw"
             style={{ objectFit: "cover", objectPosition: "center top" }}
-            unoptimized
           />
         </div>
 
@@ -106,7 +111,7 @@ function WelcomeTile() {
           <div style={{ marginBottom: "14px" }}>
             <h1
               style={{
-                fontFamily: "'Nunito', sans-serif",
+                fontFamily: "var(--font-nunito), sans-serif",
                 fontSize: "20px",
                 fontWeight: 800,
                 color: "var(--text)",
@@ -124,7 +129,7 @@ function WelcomeTile() {
           />
           <p
             style={{
-              fontFamily: "'Nunito', sans-serif",
+              fontFamily: "var(--font-nunito), sans-serif",
               fontSize: "15px",
               color: "var(--text-mid)",
               lineHeight: 1.85,
@@ -153,7 +158,7 @@ function WelcomeTile() {
               <span
                 key={text}
                 style={{
-                  fontFamily: "'Nunito', sans-serif",
+                  fontFamily: "var(--font-nunito), sans-serif",
                   fontSize: "13px",
                   fontWeight: 700,
                   background: "var(--lavender-pale)",
@@ -206,7 +211,7 @@ function BlogTile({ posts }: { posts: PostMeta[] }) {
               style={{
                 textAlign: "center",
                 padding: "40px 20px",
-                fontFamily: "'Nunito', sans-serif",
+                fontFamily: "var(--font-nunito), sans-serif",
                 fontSize: "16px",
                 fontWeight: 700,
                 color: "#b098c8",
@@ -294,9 +299,10 @@ export default function DraggableHome({ posts, song, hairColor }: Props) {
       >
         <SortableContext items={tiles} strategy={rectSortingStrategy}>
           <div
+            className="home-grid"
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+              gridTemplateColumns: "repeat(2, 1fr)",
               gap: "14px",
               alignItems: "start",
             }}
@@ -307,8 +313,6 @@ export default function DraggableHome({ posts, song, hairColor }: Props) {
                 id={id}
                 gridColumn={id === "blog" || id === "welcome" || id === "weekly"
                   ? "1 / -1"
-                  : id === "soundboard"
-                  ? "span 2"
                   : undefined}
               >
                 {renderTile(id)}

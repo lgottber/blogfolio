@@ -193,7 +193,7 @@ export default function CatPainter() {
       style={{
         borderRadius: minimized ? "8px 8px 0 0" : undefined,
         borderBottom: minimized ? "none" : undefined,
-        fontFamily: "'Nunito', sans-serif",
+        fontFamily: "var(--font-nunito), sans-serif",
         userSelect: "none",
         width: "100%",
         height: minimized ? undefined : "100%",
@@ -249,7 +249,7 @@ export default function CatPainter() {
           >
             <span
               style={{
-                fontFamily: "'Nunito', sans-serif",
+                fontFamily: "var(--font-nunito), sans-serif",
                 fontSize: "15px",
                 fontWeight: 700,
                 color: "var(--text-mid)",
@@ -398,7 +398,6 @@ export default function CatPainter() {
                   loading="eager"
                   draggable={false}
                   style={{ objectFit: "contain" }}
-                  unoptimized
                 />
 
                 {/* Draggable PNG accessories */}
@@ -550,27 +549,6 @@ export default function CatPainter() {
                 800×800
               </span>
             </div>
-          </div>
-
-          {/* Pusheen gif */}
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              padding: "8px 0 4px",
-              flex: 1,
-            }}
-          >
-            <img
-              src="/pusheen.gif"
-              alt="pusheen"
-              draggable={false}
-              style={{
-                maxHeight: "100%",
-                imageRendering: "pixelated",
-                objectFit: "contain",
-              }}
-            />
           </div>
         </div>
         {/* end overflow:hidden */}

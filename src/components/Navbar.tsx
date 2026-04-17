@@ -45,10 +45,10 @@ export default function Navbar() {
               minWidth: 0,
             }}
           >
-            <CatGif src="/cats/cat1.gif" alt="dancing cat" />
+            <CatGif src="/flowers.gif" alt="flowers" />
             <span
               style={{
-                fontFamily: "'Nunito', sans-serif",
+                fontFamily: "var(--font-nunito), sans-serif",
                 fontSize: "clamp(12px, 2vw, 16px)",
                 color: "var(--text-mid)",
                 letterSpacing: "1px",
@@ -57,7 +57,7 @@ export default function Navbar() {
             >
               Lauren&apos;s Blogfolio
             </span>
-            <CatGif src="/cats/cat1.gif" alt="dancing cat" />
+            <CatGif src="/flowers.gif" alt="flowers" />
           </Link>
         </div>
 
@@ -126,7 +126,7 @@ export default function Navbar() {
               href={l.href}
               onClick={() => setOpen(false)}
               style={{
-                fontFamily: "'Nunito', sans-serif",
+                fontFamily: "var(--font-nunito), sans-serif",
                 fontSize: "15px",
                 color: "var(--text-mid)",
                 textDecoration: "none",
@@ -167,7 +167,7 @@ function MenuLink(
     <Link
       href={href}
       style={{
-        fontFamily: "'Nunito', sans-serif",
+        fontFamily: "var(--font-nunito), sans-serif",
         fontSize: "14px",
         color: "var(--text-mid)",
         textDecoration: "none",

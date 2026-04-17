@@ -3,18 +3,19 @@ export default function Footer() {
   return (
     <footer
       style={{
-        borderTop: "2px solid #c8aaf0",
-        background: "linear-gradient(90deg, #ead8ff, #ffc8de, #ffe8d0)",
+        borderTop: "2px solid var(--window-border)",
+        background:
+          "linear-gradient(90deg, var(--navbar-from), var(--navbar-via), var(--navbar-to))",
         padding: "8px 16px",
         textAlign: "center",
       }}
     >
       <span
         style={{
-          fontFamily: "'Nunito', sans-serif",
+          fontFamily: "var(--font-nunito), sans-serif",
           fontSize: "13px",
           fontWeight: 700,
-          color: "#a080c0",
+          color: "var(--text-mid)",
         }}
       >
         © {year}
