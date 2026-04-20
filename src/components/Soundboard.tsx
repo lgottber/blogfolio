@@ -455,7 +455,7 @@ export default function Soundboard() {
               style={{
                 fontSize: "12px",
                 fontWeight: 700,
-                color: "var(--text-light)",
+                color: "var(--text-mid)",
                 borderLeft: "1px solid var(--window-border)",
                 paddingLeft: "4px",
               }}

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { formatWeek, Song } from "@/lib/weekly";
 import OSWindow from "./OSWindow";
+import SpotifyEmbed from "./SpotifyEmbed";
 
 interface Props {
   song: Song;
@@ -24,7 +25,7 @@ export default function WeeklyWidget({ song }: Props) {
               fontFamily: "var(--font-nunito), sans-serif",
               fontSize: "13px",
               fontWeight: 700,
-              color: "var(--text-light)",
+              color: "var(--text-mid)",
               letterSpacing: "1px",
               marginBottom: "10px",
             }}
@@ -33,21 +34,11 @@ export default function WeeklyWidget({ song }: Props) {
           </div>
 
           {song.spotifyId && (
-            <div
-              style={{
-                marginTop: "10px",
-                borderRadius: "8px",
-                overflow: "hidden",
-              }}
-            >
-              <iframe
-                src={`https://open.spotify.com/embed/track/${song.spotifyId}?utm_source=generator`}
-                width="100%"
-                height="80"
-                frameBorder="0"
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"
-                style={{ display: "block" }}
+            <div style={{ marginTop: "10px" }}>
+              <SpotifyEmbed
+                spotifyId={song.spotifyId}
+                title={song.title}
+                artist={song.artist}
               />
             </div>
           )}
@@ -84,7 +75,7 @@ export default function WeeklyWidget({ song }: Props) {
               fontFamily: "var(--font-nunito), sans-serif",
               fontSize: "14px",
               fontWeight: 700,
-              color: "var(--text-light)",
+              color: "var(--text-mid)",
             }}
           >
             wk of {formatWeek(song.week)}
