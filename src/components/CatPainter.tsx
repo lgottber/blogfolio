@@ -397,6 +397,7 @@ export default function CatPainter() {
                   fill
                   loading="eager"
                   draggable={false}
+                  sizes="(max-width: 600px) 100vw, 50vw"
                   style={{ objectFit: "contain" }}
                 />
 
@@ -541,7 +542,7 @@ export default function CatPainter() {
                 style={{
                   fontSize: "12px",
                   fontWeight: 700,
-                  color: "var(--text-light)",
+                  color: "var(--text-mid)",
                   borderLeft: "1px solid var(--window-border)",
                   paddingLeft: "4px",
                 }}

@@ -85,7 +85,7 @@ export default function PostCard({ post }: { post: PostMeta }) {
               style={{
                 fontFamily: "var(--font-nunito), sans-serif",
                 fontSize: "13px",
-                color: "var(--text-light)",
+                color: "var(--text-mid)",
               }}
             >
               {new Date(post.date).toLocaleDateString("en-US", {

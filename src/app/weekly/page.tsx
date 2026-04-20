@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { formatWeek, getWeeklyData, Song } from "@/lib/weekly";
 import OSWindow from "@/components/OSWindow";
+import SpotifyEmbed from "@/components/SpotifyEmbed";
 
 export const metadata: Metadata = {
   title: "weekly faves — Lauren's Blogfolio",
@@ -113,7 +114,7 @@ function WeekCard({ song, isCurrent }: { song: Song; isCurrent: boolean }) {
                 fontFamily: "var(--font-nunito), sans-serif",
                 fontSize: "14px",
                 fontWeight: 700,
-                color: "var(--text-light)",
+                color: "var(--text-mid)",
               }}
             >
               archive ✦
@@ -174,7 +175,7 @@ function WeekCard({ song, isCurrent }: { song: Song; isCurrent: boolean }) {
                 fontFamily: "var(--font-nunito), sans-serif",
                 fontSize: "13px",
                 fontWeight: 700,
-                color: "var(--lavender)",
+                color: "var(--text-mid)",
                 marginBottom: "4px",
                 letterSpacing: "1px",
               }}
@@ -208,7 +209,7 @@ function WeekCard({ song, isCurrent }: { song: Song; isCurrent: boolean }) {
                 style={{
                   fontFamily: "var(--font-nunito), sans-serif",
                   fontSize: "13px",
-                  color: "var(--text-light)",
+                  color: "var(--text-mid)",
                   fontStyle: "italic",
                   marginTop: "3px",
                 }}
@@ -221,14 +222,11 @@ function WeekCard({ song, isCurrent }: { song: Song; isCurrent: boolean }) {
 
         {/* Spotify embed */}
         {song.spotifyId && (
-          <iframe
-            src={`https://open.spotify.com/embed/track/${song.spotifyId}?utm_source=generator`}
-            width="100%"
-            height="152"
-            frameBorder="0"
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-            loading="lazy"
-            style={{ display: "block", borderRadius: "12px" }}
+          <SpotifyEmbed
+            spotifyId={song.spotifyId}
+            title={song.title}
+            artist={song.artist}
+            height={152}
           />
         )}
       </div>

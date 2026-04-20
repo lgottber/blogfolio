@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Nunito, Press_Start_2P } from "next/font/google";
+import { Nunito } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -8,17 +8,10 @@ import Script from "next/script";
 
 const nunito = Nunito({
   subsets: ["latin"],
-  weight: ["400", "600", "700", "800"],
   variable: "--font-nunito",
   display: "swap",
 });
 
-const pressStart = Press_Start_2P({
-  subsets: ["latin"],
-  weight: "400",
-  variable: "--font-press-start",
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: {
@@ -50,15 +43,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${nunito.variable} ${pressStart.variable}`}>
-      <head>
-        <link
-          rel="preload"
-          href="/laurenAnime.jpg"
-          as="image"
-          fetchPriority="high"
-        />
-      </head>
+    <html lang="en" className={nunito.variable}>
       <body>
         <CursorEffects />
         <Navbar />
