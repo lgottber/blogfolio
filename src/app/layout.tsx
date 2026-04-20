@@ -51,6 +51,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${nunito.variable} ${pressStart.variable}`}>
+      <head>
+        <link
+          rel="preload"
+          href="/laurenAnime.jpg"
+          as="image"
+          fetchPriority="high"
+        />
+      </head>
       <body>
         <CursorEffects />
         <Navbar />

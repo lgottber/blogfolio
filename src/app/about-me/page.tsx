@@ -57,7 +57,7 @@ export default function AboutMePage() {
                   style={{
                     fontFamily: "var(--font-nunito), sans-serif",
                     fontSize: "15px",
-                    color: "#a080c0",
+                    color: "#7a5890",
                     letterSpacing: "0.5px",
                   }}
                 >
@@ -94,7 +94,7 @@ export default function AboutMePage() {
                       fontFamily: "var(--font-nunito), sans-serif",
                       fontSize: "15px",
                       fontWeight: 700,
-                      color: "#c8aaf0",
+                      color: "#7a5890",
                       flexShrink: 0,
                     }}
                   >
@@ -195,7 +195,7 @@ export default function AboutMePage() {
                     style={{
                       fontSize: "14px",
                       fontWeight: 400,
-                      color: "#a080c0",
+                      color: "#7a5890",
                       marginLeft: "8px",
                     }}
                   >
@@ -206,7 +206,7 @@ export default function AboutMePage() {
                   style={{
                     fontFamily: "var(--font-nunito), sans-serif",
                     fontSize: "13px",
-                    color: "#b098c8",
+                    color: "#7a5890",
                     background: "#f4eeff",
                     border: "1px solid #c8aaf0",
                     padding: "3px 8px",
@@ -257,7 +257,7 @@ export default function AboutMePage() {
                         style={{
                           fontFamily: "var(--font-nunito), sans-serif",
                           fontSize: "13px",
-                          color: "#b098c8",
+                          color: "#7a5890",
                         }}
                       >
                         {role.period}
@@ -353,7 +353,7 @@ export default function AboutMePage() {
                     style={{
                       fontFamily: "var(--font-nunito), sans-serif",
                       fontSize: "15px",
-                      color: "#a080c0",
+                      color: "#7a5890",
                       fontWeight: 700,
                       marginTop: "2px",
                     }}
@@ -365,7 +365,7 @@ export default function AboutMePage() {
                       style={{
                         fontFamily: "var(--font-nunito), sans-serif",
                         fontSize: "14px",
-                        color: "#b098c8",
+                        color: "#7a5890",
                         fontStyle: "italic",
                         marginTop: "3px",
                       }}
@@ -378,7 +378,7 @@ export default function AboutMePage() {
                   style={{
                     fontFamily: "var(--font-nunito), sans-serif",
                     fontSize: "13px",
-                    color: "#b098c8",
+                    color: "#7a5890",
                     background: "#f4eeff",
                     border: "1px solid #c8aaf0",
                     padding: "4px 8px",
