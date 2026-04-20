@@ -1,6 +1,6 @@
 "use client";
 import dynamic from "next/dynamic";
-import { HairColor, Song } from "@/lib/weekly";
+import { Song } from "@/lib/weekly";
 import { PostMeta } from "@/lib/posts";
 
 function HomeSkeleton() {
@@ -41,7 +41,6 @@ const DraggableHome = dynamic(() => import("./DraggableHome"), {
 interface Props {
   posts: PostMeta[];
   song: Song;
-  hairColor: HairColor;
 }
 
 export default function HomeWrapper(props: Props) {

@@ -24,7 +24,7 @@ import WeeklyWidget from "./WeeklyWidget";
 import CatPainter from "./CatPainter";
 import Soundboard from "./Soundboard";
 import PostCard from "./PostCard";
-import { HairColor, Song } from "@/lib/weekly";
+import { Song } from "@/lib/weekly";
 import { PostMeta } from "@/lib/posts";
 import { DragHandleContext } from "./DragHandleContext";
 
@@ -33,7 +33,6 @@ type TileId = "welcome" | "weekly" | "catpainter" | "soundboard" | "blog";
 interface Props {
   posts: PostMeta[];
   song: Song;
-  hairColor: HairColor;
 }
 
 function SortableTile(
@@ -240,7 +239,7 @@ const INITIAL_TILES: TileId[] = [
   "blog",
 ];
 
-export default function DraggableHome({ posts, song, hairColor }: Props) {
+export default function DraggableHome({ posts, song }: Props) {
   const [tiles, setTiles] = useState<TileId[]>(INITIAL_TILES);
   const [activeId, setActiveId] = useState<TileId | null>(null);
 
@@ -272,7 +271,7 @@ export default function DraggableHome({ posts, song, hairColor }: Props) {
       case "welcome":
         return <WelcomeTile />;
       case "weekly":
-        return <WeeklyWidget song={song} hairColor={hairColor} />;
+        return <WeeklyWidget song={song} />;
       case "catpainter":
         return <CatPainter />;
       case "soundboard":
