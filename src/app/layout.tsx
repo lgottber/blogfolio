@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CursorEffects from "@/components/CursorEffects";
+import Script from "next/script";
 
 const nunito = Nunito({
   subsets: ["latin"],
@@ -66,6 +67,12 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <Script
+          defer
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon='{"token": "6942d6f575fa4e3f8706995da74430e0"}'
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
