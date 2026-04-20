@@ -45,7 +45,7 @@ export default function Navbar() {
               minWidth: 0,
             }}
           >
-            <CatGif src="/flowers.gif" alt="flowers" />
+            <FlowerGif />
             <span
               style={{
                 fontFamily: "var(--font-nunito), sans-serif",
@@ -57,7 +57,7 @@ export default function Navbar() {
             >
               Lauren&apos;s Blogfolio
             </span>
-            <CatGif src="/flowers.gif" alt="flowers" />
+            <FlowerGif />
           </Link>
         </div>
 
@@ -80,6 +80,8 @@ export default function Navbar() {
           <ThemeSwitcher />
           <button
             type="button"
+            aria-label="Toggle navigation menu"
+            aria-expanded={open}
             onClick={() => setOpen((o) => !o)}
             style={{
               background: "rgba(255,255,255,0.4)",
@@ -147,11 +149,11 @@ export default function Navbar() {
   );
 }
 
-function CatGif({ src, alt }: { src: string; alt: string }) {
+function FlowerGif() {
   return (
     <Image
-      src={src}
-      alt={alt}
+      src="/flowers.gif"
+      alt=""
       width={40}
       height={40}
       style={{ imageRendering: "pixelated", objectFit: "contain" }}

@@ -221,77 +221,6 @@ body {
   border-radius: 4px;
 }
 
-/* ── Animations ── */
-@keyframes marquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-@keyframes blink {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-}
-@keyframes sparkle {
-  0%, 100% {
-    transform: scale(1) rotate(0deg);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(1.4) rotate(180deg);
-    opacity: 0.65;
-  }
-}
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0) rotate(-3deg);
-  }
-  50% {
-    transform: translateY(-7px) rotate(3deg);
-  }
-}
-@keyframes heartbeat {
-  0%, 100% {
-    transform: scale(1);
-  }
-  25% {
-    transform: scale(1.2);
-  }
-  75% {
-    transform: scale(1.08);
-  }
-}
-@keyframes load-bar {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 85%;
-  }
-}
-
-.blink {
-  animation: blink 1s step-end infinite;
-}
-.sparkle {
-  display: inline-block;
-  animation: sparkle 2s ease-in-out infinite;
-}
-.float {
-  display: inline-block;
-  animation: float 3.5s ease-in-out infinite;
-}
-.heartbeat {
-  display: inline-block;
-  animation: heartbeat 1.8s ease-in-out infinite;
-}
-
 /* ── Themed navbar ── */
 .site-navbar-bar {
   background: linear-gradient(
@@ -302,25 +231,13 @@ body {
   );
   border-bottom: 2px solid var(--window-border);
 }
-.site-marquee-bar {
-  background: var(--marquee-bg);
-  border-bottom: 1px solid var(--window-border);
-}
 
-/* Marquee */
-.marquee-wrapper {
-  overflow: hidden;
-  width: 100%;
-}
-.marquee-track {
-  display: flex;
-  width: max-content;
-  animation: marquee 20s linear infinite;
-}
-.marquee-content {
-  white-space: nowrap;
-  flex-shrink: 0;
-  padding-right: 3rem;
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 /* ── OS Window chrome ── */
@@ -399,27 +316,6 @@ body {
   box-shadow: 3px 3px 0px #a888d8;
 }
 
-/* ── Loading bar ── */
-.loading-bar-track {
-  background: var(--lavender-pale);
-  border: 2px solid var(--lavender);
-  border-radius: 3px;
-  height: 14px;
-  overflow: hidden;
-  padding: 1px;
-}
-.loading-bar-fill {
-  height: 100%;
-  background: repeating-linear-gradient(
-    90deg,
-    var(--lavender) 0px,
-    var(--lavender) 10px,
-    var(--lavender-soft) 10px,
-    var(--lavender-soft) 14px
-  );
-  border-radius: 2px;
-  animation: load-bar 2s ease-out forwards;
-}
 
 /* ── MDX Prose ── */
 .y2k-prose {
