@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { useDragHandle } from "./DragHandleContext";
+import { useDragHandle } from "./DragHandleContext.tsx";
 
 type AccId =
   | "hat"

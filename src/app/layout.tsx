@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import CursorEffects from "@/components/CursorEffects";
+import Navbar from "../components/Navbar.tsx";
+import Footer from "../components/Footer.tsx";
+import CursorEffects from "../components/CursorEffects.tsx";
 import Script from "next/script";
 
 const nunito = Nunito({
@@ -11,7 +11,6 @@ const nunito = Nunito({
   variable: "--font-nunito",
   display: "swap",
 });
-
 
 export const metadata: Metadata = {
   title: {

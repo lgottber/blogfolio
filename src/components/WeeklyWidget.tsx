@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { formatWeek, Song } from "@/lib/weekly";
-import OSWindow from "./OSWindow";
-import SpotifyEmbed from "./SpotifyEmbed";
+import { formatWeek, Song } from "../lib/weekly.ts";
+import OSWindow from "./OSWindow.tsx";
+import SpotifyEmbed from "./SpotifyEmbed.tsx";
 
 interface Props {
   song: Song;

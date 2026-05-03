@@ -1,7 +1,7 @@
-import { getAllPosts, getPost } from "@/lib/posts";
+import { getAllPosts, getPost } from "../../../lib/posts.ts";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import OSWindow from "@/components/OSWindow";
+import OSWindow from "../../../components/OSWindow.tsx";
 
 export function generateStaticParams() {
   return getAllPosts().map((p) => ({ slug: p.slug }));

@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import ThemeSwitcher from "./ThemeSwitcher";
+import ThemeSwitcher from "./ThemeSwitcher.tsx";
 import { useState } from "react";
 
 const NAV_LINKS = [
@@ -144,7 +144,6 @@ export default function Navbar() {
           ))}
         </div>
       )}
-
     </header>
   );
 }

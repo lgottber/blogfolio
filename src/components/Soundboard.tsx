@@ -1,6 +1,6 @@
 "use client";
 import { useRef, useState } from "react";
-import { useDragHandle } from "./DragHandleContext";
+import { useDragHandle } from "./DragHandleContext.tsx";
 
 interface Sound {
   id: string;

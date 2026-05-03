@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { getAllPosts } from "@/lib/posts";
-import PostCard from "@/components/PostCard";
-import OSWindow from "@/components/OSWindow";
+import { getAllPosts } from "../../lib/posts.ts";
+import PostCard from "../../components/PostCard.tsx";
+import OSWindow from "../../components/OSWindow.tsx";
 
 export const metadata: Metadata = { title: "blog — Lauren's Blogfolio" };
 

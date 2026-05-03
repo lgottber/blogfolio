@@ -190,7 +190,8 @@ html, body {
 
 body {
   color: var(--text);
-  font-family: var(--font-nunito), sans-serif;
+  font-family:
+    var(--font-nunito), sans-serif;
   font-size: 16px;
   line-height: 1.7;
   overflow-x: hidden;
@@ -261,7 +262,8 @@ body {
 }
 
 .os-titlebar-title {
-  font-family: var(--font-nunito), sans-serif;
+  font-family:
+    var(--font-nunito), sans-serif;
   font-size: 14px;
   color: var(--text-mid);
   letter-spacing: 0.5px;
@@ -284,7 +286,8 @@ body {
   border-radius: 2px;
   border: 1.5px solid rgba(0, 0, 0, 0.12);
   display: inline-block;
-  font-family: var(--font-nunito), sans-serif;
+  font-family:
+    var(--font-nunito), sans-serif;
   font-size: 5px;
   line-height: 9px;
   text-align: center;
@@ -295,7 +298,8 @@ body {
 }
 
 .y2k-btn {
-  font-family: var(--font-nunito), sans-serif;
+  font-family:
+    var(--font-nunito), sans-serif;
   font-size: 8px;
   padding: 8px 16px;
   border: 2px solid var(--lavender);
@@ -316,15 +320,16 @@ body {
   box-shadow: 3px 3px 0px #a888d8;
 }
 
-
 /* ── MDX Prose ── */
 .y2k-prose {
-  font-family: var(--font-nunito), sans-serif;
+  font-family:
+    var(--font-nunito), sans-serif;
   font-size: 14px;
   color: var(--text);
 }
 .y2k-prose h1, .y2k-prose h2, .y2k-prose h3 {
-  font-family: var(--font-nunito), sans-serif;
+  font-family:
+    var(--font-nunito), sans-serif;
   color: var(--text-mid);
   margin: 1.8rem 0 0.8rem;
   line-height: 1.7;
@@ -362,7 +367,8 @@ body {
   color: var(--lavender);
 }
 .y2k-prose code {
-  font-family: var(--font-nunito), sans-serif;
+  font-family:
+    var(--font-nunito), sans-serif;
   font-size: 0.68em;
   background: var(--mint-soft);
   border: 1px solid var(--mint);

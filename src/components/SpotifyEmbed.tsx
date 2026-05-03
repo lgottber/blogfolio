@@ -21,7 +21,10 @@ export default function SpotifyEmbed(
         height={height}
         frameBorder="0"
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        style={{ display: "block", borderRadius: height > 100 ? "12px" : "8px" }}
+        style={{
+          display: "block",
+          borderRadius: height > 100 ? "12px" : "8px",
+        }}
       />
     );
   }

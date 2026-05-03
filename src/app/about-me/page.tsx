@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import OSWindow from "@/components/OSWindow";
+import OSWindow from "../../components/OSWindow.tsx";
 import resumeData from "../../../data/resume.json";
 
 export const metadata: Metadata = {

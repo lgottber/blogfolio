@@ -18,15 +18,15 @@ import {
   useSortable,
 } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
-import OSWindow from "./OSWindow";
-import WelcomeTile from "./WelcomeTile";
-import WeeklyWidget from "./WeeklyWidget";
-import CatPainter from "./CatPainter";
-import Soundboard from "./Soundboard";
-import PostCard from "./PostCard";
-import { Song } from "@/lib/weekly";
-import { PostMeta } from "@/lib/posts";
-import { DragHandleContext } from "./DragHandleContext";
+import OSWindow from "./OSWindow.tsx";
+import WelcomeTile from "./WelcomeTile.tsx";
+import WeeklyWidget from "./WeeklyWidget.tsx";
+import CatPainter from "./CatPainter.tsx";
+import Soundboard from "./Soundboard.tsx";
+import PostCard from "./PostCard.tsx";
+import { Song } from "../lib/weekly.ts";
+import { PostMeta } from "../lib/posts.ts";
+import { DragHandleContext } from "./DragHandleContext.tsx";
 
 type TileId = "welcome" | "weekly" | "catpainter" | "soundboard" | "blog";
 
@@ -62,9 +62,10 @@ function SortableTile(
         transition,
         opacity: isDragging ? 0.35 : 1,
         gridColumn,
-        alignSelf: id === "welcome" || id === "catpainter" || id === "soundboard"
-          ? "stretch"
-          : "start",
+        alignSelf:
+          id === "welcome" || id === "catpainter" || id === "soundboard"
+            ? "stretch"
+            : "start",
         display: id === "welcome" || id === "catpainter" || id === "soundboard"
           ? "flex"
           : undefined,
@@ -80,7 +81,6 @@ function SortableTile(
     </div>
   );
 }
-
 
 function BlogTile({ posts }: { posts: PostMeta[] }) {
   return (
@@ -127,7 +127,9 @@ export default function DraggableHome({ posts, song }: Props) {
 
   const sensors = useSensors(
     useSensor(MouseSensor, { activationConstraint: { distance: 6 } }),
-    useSensor(TouchSensor, { activationConstraint: { delay: 250, tolerance: 5 } }),
+    useSensor(TouchSensor, {
+      activationConstraint: { delay: 250, tolerance: 5 },
+    }),
   );
 
   function handleDragStart(e: DragStartEvent) {
