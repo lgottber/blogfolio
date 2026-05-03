@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { useDragHandle } from "./DragHandleContext";
+import { useDragHandle } from "./DragHandleContext.tsx";
 
 interface OSWindowProps {
   title: string;

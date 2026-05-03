@@ -8,7 +8,9 @@ export interface Song {
   spotifyId?: string;
 }
 
-export function getWeeklyData(): { songs: { current: Song; herstory: Song[] } } {
+export function getWeeklyData(): {
+  songs: { current: Song; herstory: Song[] };
+} {
   return {
     songs: songsData as { current: Song; herstory: Song[] },
   };

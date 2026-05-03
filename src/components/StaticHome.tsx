@@ -1,11 +1,11 @@
-import OSWindow from "./OSWindow";
-import WeeklyWidget from "./WeeklyWidget";
-import CatPainter from "./CatPainter";
-import Soundboard from "./Soundboard";
-import PostCard from "./PostCard";
-import WelcomeTile from "./WelcomeTile";
-import { Song } from "@/lib/weekly";
-import { PostMeta } from "@/lib/posts";
+import OSWindow from "./OSWindow.tsx";
+import WeeklyWidget from "./WeeklyWidget.tsx";
+import CatPainter from "./CatPainter.tsx";
+import Soundboard from "./Soundboard.tsx";
+import PostCard from "./PostCard.tsx";
+import WelcomeTile from "./WelcomeTile.tsx";
+import { Song } from "../lib/weekly.ts";
+import { PostMeta } from "../lib/posts.ts";
 
 interface Props {
   posts: PostMeta[];
@@ -68,10 +68,22 @@ export default function StaticHome({ posts, song }: Props) {
         <div style={{ gridColumn: "1 / -1" }}>
           <WeeklyWidget song={song} />
         </div>
-        <div style={{ alignSelf: "stretch", display: "flex", flexDirection: "column" }}>
+        <div
+          style={{
+            alignSelf: "stretch",
+            display: "flex",
+            flexDirection: "column",
+          }}
+        >
           <Soundboard />
         </div>
-        <div style={{ alignSelf: "stretch", display: "flex", flexDirection: "column" }}>
+        <div
+          style={{
+            alignSelf: "stretch",
+            display: "flex",
+            flexDirection: "column",
+          }}
+        >
           <CatPainter />
         </div>
         <div style={{ gridColumn: "1 / -1" }}>

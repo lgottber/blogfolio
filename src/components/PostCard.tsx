@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { PostMeta } from "@/lib/posts";
+import { PostMeta } from "../lib/posts.ts";
 
 const TAG_COLORS: Record<string, { text: string; bg: string; border: string }> =
   {

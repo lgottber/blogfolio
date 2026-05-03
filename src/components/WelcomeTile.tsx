@@ -1,10 +1,13 @@
 import Image from "next/image";
-import OSWindow from "./OSWindow";
+import OSWindow from "./OSWindow.tsx";
 
 export default function WelcomeTile() {
   return (
     <OSWindow title="welcome.txt" fillHeight>
-      <div className="welcome-split" style={{ display: "flex", height: "100%" }}>
+      <div
+        className="welcome-split"
+        style={{ display: "flex", height: "100%" }}
+      >
         {/* Photo — left half */}
         <div
           className="welcome-split-photo"

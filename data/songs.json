@@ -1,24 +1,39 @@
 {
   "current": {
-    "title": "Somebody Pay Nina",
-    "artist": "1tbsp, Ninajirachi",
-    "note": "love some uk funky",
-    "week": "2026-04-20",
-    "spotifyId": "0YQBMXqkRA0klKt44GavaA?"
+    "title": "High energy",
+    "artist": "Evelyn Thomas",
+    "note": "Although best known worldwide for her 1980s hi-NRG club hits, Thomas recorded and performed disco, Eurobeat, R&B, and dance music songs in the 1980s.",
+    "week": "2026-05-03",
+    "spotifyId": "2O3JCRH7IvUUbzbxEvoVAi"
   },
   "herstory": [
     {
-    "title": "Don't Leave Me This Way",
-    "artist": "Thelma Houston",
-    "note": "she's an icon",
-    "week": "2026-04-13",
-    "spotifyId": "2rBBhFXtuMoGuwYTSDpAdF"
-  },
+      "title": "I'm so Beautiful",
+      "artist": "Divine",
+      "note": "Divine's name comes from Jean Genet’s novel Our Lady of the Flowers",
+      "week": "2026-04-27",
+      "spotifyId": "3FPbzQgpQQ0DVP7bbMluIt"
+    },
     {
-    "title": "Supermodel",
-    "artist": "RuPaul",
-    "note": "you better WORK",
-    "week": "2026-04-06",
-    "spotifyId": "36Rpz4MZQhGknLEmTmHr8v"
-  }]
+      "title": "Somebody Pay Nina",
+      "artist": "1tbsp, Ninajirachi",
+      "note": "love some uk funky",
+      "week": "2026-04-20",
+      "spotifyId": "0YQBMXqkRA0klKt44GavaA"
+    },
+    {
+      "title": "Don't Leave Me This Way",
+      "artist": "Thelma Houston",
+      "note": "she's an icon",
+      "week": "2026-04-13",
+      "spotifyId": "2rBBhFXtuMoGuwYTSDpAdF"
+    },
+    {
+      "title": "Supermodel",
+      "artist": "RuPaul",
+      "note": "you better WORK",
+      "week": "2026-04-06",
+      "spotifyId": "36Rpz4MZQhGknLEmTmHr8v"
+    }
+  ]
 }

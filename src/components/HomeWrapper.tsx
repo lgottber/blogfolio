@@ -1,11 +1,13 @@
 "use client";
 import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
-import { Song } from "@/lib/weekly";
-import { PostMeta } from "@/lib/posts";
-import StaticHome from "./StaticHome";
+import { Song } from "../lib/weekly.ts";
+import { PostMeta } from "../lib/posts.ts";
+import StaticHome from "./StaticHome.tsx";
 
-const DraggableHome = dynamic(() => import("./DraggableHome"), { ssr: false });
+const DraggableHome = dynamic(() => import("./DraggableHome.tsx"), {
+  ssr: false,
+});
 
 interface Props {
   posts: PostMeta[];

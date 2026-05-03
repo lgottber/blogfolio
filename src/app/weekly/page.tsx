@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { formatWeek, getWeeklyData, Song } from "@/lib/weekly";
-import OSWindow from "@/components/OSWindow";
-import SpotifyEmbed from "@/components/SpotifyEmbed";
+import { formatWeek, getWeeklyData, Song } from "../../lib/weekly.ts";
+import OSWindow from "../../components/OSWindow.tsx";
+import SpotifyEmbed from "../../components/SpotifyEmbed.tsx";
 
 export const metadata: Metadata = {
   title: "weekly faves — Lauren's Blogfolio",

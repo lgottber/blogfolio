@@ -1,6 +1,6 @@
-import { getAllPosts } from "@/lib/posts";
-import { getWeeklyData } from "@/lib/weekly";
-import HomeWrapper from "@/components/HomeWrapper";
+import { getAllPosts } from "../lib/posts.ts";
+import { getWeeklyData } from "../lib/weekly.ts";
+import HomeWrapper from "../components/HomeWrapper.tsx";
 
 export default function HomePage() {
   const posts = getAllPosts();
