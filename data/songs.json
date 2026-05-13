@@ -1,12 +1,19 @@
 {
   "current": {
+    "title": "Venus",
+    "artist": "Bananarama",
+    "note": "Did you know Bananarama was discovered while living in a room above the Sex Pistols' former rehearsal space?",
+    "week": "2026-05-10",
+    "spotifyId": "4XX1pFUkQOZTYp6Hb6a6Ae"
+  },
+  "herstory": [
+    {
     "title": "High energy",
     "artist": "Evelyn Thomas",
     "note": "Although best known worldwide for her 1980s hi-NRG club hits, Thomas recorded and performed disco, Eurobeat, R&B, and dance music songs in the 1980s.",
     "week": "2026-05-03",
     "spotifyId": "2O3JCRH7IvUUbzbxEvoVAi"
   },
-  "herstory": [
     {
       "title": "I'm so Beautiful",
       "artist": "Divine",
